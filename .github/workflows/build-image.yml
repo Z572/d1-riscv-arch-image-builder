@@ -21,6 +21,8 @@ jobs:
     - name: build img
       run: sh build_img.sh ${{ github.event.commits[0].id }}
 
+    - name: tree
+      run: tree
     - name: Upload archive
       uses: actions/upload-artifact@v3
       with:
