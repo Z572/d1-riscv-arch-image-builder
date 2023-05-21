@@ -22,9 +22,9 @@ jobs:
       run: sh build_img.sh ${{ github.event.commits[0].id }}
 
     - name: tree
-      run: tree
+      run: pwd && tree
     - name: Upload archive
       uses: actions/upload-artifact@v3
       with:
         name: archlinux_riscv.img.tar.gz
-        path: /home/runner/work/riscv-arch-image-builder/riscv-arch-image-builder/archlinux_riscv.img.tar.gz
+        path: archlinux_riscv.img.tar.gz
